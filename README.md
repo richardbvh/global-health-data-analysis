@@ -54,8 +54,10 @@ global-health-data-analysis/
 ├── notebooks/
 ├── data/
 └── reports/
+
+
 ## Author
 
 Richard Huynh  
-Master of Information Technology & Systems 
+Master of Information Technology & Systems  
 University of Tasmania
