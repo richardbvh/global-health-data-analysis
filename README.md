@@ -1,18 +1,33 @@
-# Global Health Data Analysis
+# Global Health SDG3 Analysis
 
-This project analyses global health indicators related to the United Nations Sustainable Development Goal 3 (SDG 3): ensuring healthy lives and promoting well-being for all.
+This project explores global health outcomes related to **United Nations Sustainable Development Goal 3 (SDG 3)**, which focuses on ensuring healthy lives and promoting well-being for all.
 
-The project examines how factors such as food insecurity, food prices, and government health expenditure influence health outcomes across multiple countries. It combines data preparation, exploratory data analysis, regression modelling, and clustering techniques to identify patterns and generate insights from global health data.
+Using multi-country datasets on **food affordability, food insecurity, health expenditure, life expectancy, maternal mortality, and overall health achievement**, this project applies **data cleaning, exploratory data analysis, regression modelling, and clustering techniques** to identify patterns and generate insights into health performance across countries.
+
+## Project Context
+
+This project was completed as part of an academic data analytics project at the **University of Tasmania**.
+
+My contribution included:
+- data cleaning and preprocessing
+- dataset integration and transformation
+- exploratory data analysis and visualisation
+- regression modelling and forecasting
+- clustering analysis using unsupervised learning
+- notebook development and result interpretation
 
 ## Project Objective
 
-The main objective of this project is to understand why some countries achieve better health outcomes than others and to explore how health indicators may change in the future.
+The objective of this project is to understand why some countries achieve better health outcomes than others and to explore how selected health indicators may change over time.
 
-This was done by analysing multiple global datasets covering food affordability, food insecurity, health expenditure, life expectancy, maternal mortality, and overall health achievement levels.
+The analysis focuses on the relationship between:
+- food insecurity and health outcomes
+- food affordability and health performance
+- government health expenditure and life expectancy
+- government health expenditure and maternal mortality
+- country-level health indicator patterns across time
 
-## Problem Statement
-
-Many countries face significant challenges in achieving strong health outcomes for their populations. These outcomes are influenced by multiple interconnected factors, including access to nutritious food, affordability of healthy diets, public health investment, and broader health indicators.
+## Key Questions
 
 This project addresses the following questions:
 
@@ -23,7 +38,7 @@ This project addresses the following questions:
 
 ## Project Scope
 
-The project focused on 10 selected countries from different continents and income groups to ensure geographic and economic diversity:
+The project focused on 10 selected countries from different continents and income groups to provide geographic and economic diversity:
 
 - Australia
 - Canada
@@ -36,7 +51,7 @@ The project focused on 10 selected countries from different continents and incom
 - Nigeria
 - Vietnam
 
-## Dataset
+## Datasets
 
 This project uses multiple global health datasets:
 
@@ -55,25 +70,26 @@ This project uses multiple global health datasets:
 - **HealthAcheivement-2024.xlsx**  
   Used as a reference dataset for prediction and comparison in the later modelling stage.
 
-## Project Stages
+## Project Workflow
 
-### Phase 1 – Data Preparation and Exploratory Data Analysis
-
-Phase 1 focused on preparing and understanding the data.
-
-Tasks included:
-
-- loading multiple datasets into Python
+### 1. Data Preparation and Cleaning
+This stage focused on preparing the datasets for analysis by:
+- loading multiple Excel datasets into Python
 - standardising column names and country names
 - handling missing values
-- reshaping and merging datasets
-- filtering selected countries
-- generating descriptive statistics
-- visualising variable distributions
-- analysing relationships between health-related variables
+- reshaping and transforming data
+- aligning features by country and year
+- merging datasets into analysis-ready tables
+
+### 2. Exploratory Data Analysis (EDA)
+This stage focused on understanding patterns and relationships in the data through:
+- descriptive statistics
+- cross-country comparisons
+- variable distribution analysis
+- scatter plots and trend exploration
+- relationship analysis across health, food, and expenditure indicators
 
 Key analyses included:
-
 - cost of healthy diet vs life expectancy
 - government health expenditure vs life expectancy
 - government health expenditure vs maternal mortality
@@ -81,23 +97,21 @@ Key analyses included:
 - food insecurity vs maternal mortality
 - food prices vs overall health achievement level
 
-Phase 1 helped identify key patterns and build the foundation for deeper modelling.
+### 3. Predictive Modelling
+Regression models were used to explore trends and forecast selected indicators, including:
+- food costs
+- food insecurity
+- life expectancy
+- SDG 3 achievement-related outcomes
 
-### Phase 2 – Machine Learning and Pattern Discovery
+### 4. Clustering and Pattern Discovery
+Unsupervised learning methods were applied to identify countries with similar health indicator profiles:
+- **K-Means Clustering**
+- **Hierarchical Clustering**
+- **Elbow Method**
+- **Silhouette Score evaluation**
 
-Phase 2 extended the project into machine learning.
-
-This stage included:
-
-- clustering countries with similar health indicator patterns
-- applying **K-Means Clustering**
-- applying **Hierarchical Clustering**
-- scaling data using **StandardScaler**
-- selecting cluster structures using the **Elbow Method**
-- evaluating clustering quality using **Silhouette Score**
-- applying regression models for prediction and forecasting
-
-Phase 2 focused on identifying country groups with similar health profiles and exploring future changes in selected health indicators.
+This stage helped group countries based on shared health patterns and compare higher-performing and lower-performing clusters.
 
 ## Methods Used
 
@@ -111,9 +125,9 @@ Phase 2 focused on identifying country groups with similar health profiles and e
 
 ### Exploratory Data Analysis
 - Descriptive statistics
-- Histogram
-- Boxplot
-- Scatter plot
+- Histograms
+- Boxplots
+- Scatter plots
 - Cross-country comparison
 - Relationship analysis
 
@@ -122,6 +136,7 @@ Phase 2 focused on identifying country groups with similar health profiles and e
 - K-Means Clustering
 - Hierarchical Clustering
 - StandardScaler
+- MinMaxScaler
 - Elbow Method
 - Silhouette Score
 
@@ -134,6 +149,17 @@ Phase 2 focused on identifying country groups with similar health profiles and e
 - Seaborn
 - Scikit-learn
 - Jupyter Notebook
+
+## Key Skills Demonstrated
+
+- Data cleaning and preprocessing
+- Multi-source dataset integration
+- Exploratory data analysis (EDA)
+- Data visualisation
+- Regression modelling and forecasting
+- Unsupervised learning
+- Insight generation from real-world datasets
+- Communicating analytical findings through notebooks and reports
 
 ## Key Findings
 
@@ -149,34 +175,12 @@ The analysis identified several important insights:
 ## Repository Structure
 
 ```text
-global-health-data-analysis/
+global-health-sdg3-analysis/
 ├── README.md
 ├── data/
 ├── notebooks/
-└── reports/
-```
-
-## Files in This Repository
-
-### Data
-Contains raw datasets used for analysis and modelling.
-
-### Notebooks
-Contains Jupyter notebooks for:
-- data cleaning and preprocessing
-- exploratory data analysis
-- clustering analysis
-- regression and prediction
-
-### Reports
-Contains project report documents summarising methods, findings, and conclusions.
-
-## Why This Project Matters
-
-This project demonstrates how data analytics and machine learning can be used to study real-world global health challenges. It shows the practical value of combining data cleaning, visualisation, statistical analysis, and modelling to support evidence-based understanding of health outcomes across countries.
-
-## Author
-
-Richard Huynh  
-Master of Information Technology & Systems  
-University of Tasmania
+│   ├── 01_data-cleaning-and-eda.ipynb
+│   ├── 02_sdg3-achievement-prediction.ipynb
+│   └── 03_country-health-clustering.ipynb
+├── reports/
+└── images/
