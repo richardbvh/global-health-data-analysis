@@ -179,11 +179,11 @@ global-health-sdg3-analysis/
 ├── README.md
 ├── data/
 ├── notebooks/
-│   ├── 01_data-cleaning-and-eda.ipynb
-│   ├── 02_sdg3-achievement-prediction.ipynb
-│   └── 03_country-health-clustering.ipynb
+│   ├── data-cleaning-and-eda.ipynb
+│   ├── sdg3-achievement-prediction.ipynb
+│   └── country-health-clustering.ipynb
 ├── report/
-
+```
 ## Author
 
 **Richard Huynh**  
