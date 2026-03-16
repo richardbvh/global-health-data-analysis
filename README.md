@@ -182,5 +182,10 @@ global-health-sdg3-analysis/
 │   ├── 01_data-cleaning-and-eda.ipynb
 │   ├── 02_sdg3-achievement-prediction.ipynb
 │   └── 03_country-health-clustering.ipynb
-├── reports/
-└── images/
+├── report/
+
+## Author
+
+**Richard Huynh**  
+Master of Information Technology & Systems  
+University of Tasmania
